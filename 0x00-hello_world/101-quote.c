@@ -1,11 +1,15 @@
 #include <stdio.h>
-/** main - just needs to print that exactly
- * Description:Needs to print exactly that
- * Return:1
- *
- */
+#include <unistd.h>
 
-int main(void)
+/**
+ * main - print the string in the put function
+ *
+ * Description:using the main function
+ * this program prints "and that piece of art is useful -Dora Korpar
+ * Return: 0
+ */
+int mai(void)
 {
-	write("and that piece of art is useful" - Dora Korpar, 2015 - 10 - 19" \n");
+	write(2, "and that piece of art is useful\" -Dora Korpar, 2015-10-19\n", 59);
 	return (1);
+}
