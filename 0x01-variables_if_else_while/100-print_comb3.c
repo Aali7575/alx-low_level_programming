@@ -25,7 +25,7 @@ int main(void)
                                  if (i != 18 || j != 19)
                                  {
                                          putchar(',');
-                                                 putchar(' ');
+                                         putchar(' ');
                                  }
                         }
                 }
