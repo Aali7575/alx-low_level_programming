@@ -1,34 +1,36 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 
 /**
- * main - print if the number is positive nevgative or zeri
+ * main - Entry point
  *
- * Description: using the main function
- * this program prints "programming is positive,negative or zero
- * Return: 0
- */
+ * Return: Always 0
+*/
+
 int main(void)
 {
-	int i;
-	int j;
+int p, q;
 
-	for (i = 0; i <= 99; i++)
-	{
-		for (j = i + 1; j <= 99; j++)
-		{
-			putchar(i / 10 + '0');
-			putchar(i %  10 + '0');
-			putchar(' ');
-			putchar(j / 10 + '0');
-			putchar(j % 10 + '0');
-			if ((i != 98 && j == 99))
-			{
-				putchar(',');
-				putchar(' ');
-			}
-		}
-	}
-	putchar('\n');
-	return (0);
+for (p = 0; p <= 98; p++)
+{
+for (q = p + 1; q <= 99; q++)
+{
+putchar((p / 10) + '0');
+putchar((p % 10) + '0');
+putchar(' ');
+putchar((q / 10) + '0');
+putchar((q % 10) + '0');
+
+if (p == 98 && q == 99)
+continue;
+
+putchar(',');
+putchar(' ');
+}
+}
+
+putchar('\n');
+
+return (0);
 }
