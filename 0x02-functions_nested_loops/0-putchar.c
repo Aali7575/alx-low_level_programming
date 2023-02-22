@@ -2,6 +2,7 @@
 /**
  * main - program that prints _putchar
  *
+ * Description: program that does not use printf etc
  * Return always 0 success
  */
 
