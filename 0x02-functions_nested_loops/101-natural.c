@@ -18,7 +18,7 @@ int main(void)
 	{
 		if ((x % 3) == 0)
 		{
-			sum_3 - sum_3 + x;
+			sum_3 = sum_3 + x;
 		}
 		else if ((x % 5) == 0)
 		{
@@ -29,3 +29,4 @@ int main(void)
 	printf("%lu\n", sum);
 	return (0);
 }
+
