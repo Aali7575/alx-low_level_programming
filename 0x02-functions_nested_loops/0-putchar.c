@@ -1,9 +1,11 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - program that prints _putchar
  *
- * Description: program that does not use printf etc
- * Return always 0 success
+ * Description: using the main function
+ *
+ * this prints putchar followed by a new line
+ * Return: always 0 success
  */
 
 int main(void)
