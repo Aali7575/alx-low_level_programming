@@ -5,8 +5,7 @@
  *
  * Return: 0 on Success
  */
-int main(void)
-	{
+{
 	int i;
 
 	unsigned long num1 = 1;
@@ -29,4 +28,5 @@ int main(void)
 
 	return (0);
 }
+
 
