@@ -5,9 +5,9 @@
 /**
  * main -  a function that reads a text file and prints it
  * to the POSIX standard output.
- *@read_textfile: where letters is the number of letters
- *@param filename name of file to read
- *@param letters num of letters it should read and print 
+ *d_textfile: where letters is the number of letters
+ *@filename name of file to read
+ *@letters num of letters it should read and print 
  * Return: 0 if the file can not be opened or read
  *
  */
