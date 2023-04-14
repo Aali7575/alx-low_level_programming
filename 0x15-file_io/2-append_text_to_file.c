@@ -4,37 +4,40 @@
 /**
  * append_text_to_file - appends text
  * @filename: filename.
- *  @text_content: added content.
- *  Return: on success or -1  on failure
+ *  @text_content: adde
+ *  Return: 1 on success -1 on failure
  */
+
 int append_text_to_file(const char *filename, char *text_content)
 {
-	FILE *myfile;
-	int outcome;
+	int filedes;
+	int bytes;
+	ssize_t text_size = 0;
 
 	if (filename == NULL)
-	{
 		return (-1);
-	}
-	if (text_content == NULL)
-	{
-		return (-1);
-	}
-	myfile = fopen(filename, "a");
 
-	if (myfile == NULL)
+	if (text_content != NULL)
 	{
-		return (-1);
+		while (text_content[text_size])
+			text_size++;
 	}
-	outcome = fputs(text_content, myfile);
-	fclose(myfile);
 
-	if (outcome == EOF)
-	{
+	filedes = open(filename, O_WRONLY | O_APPEND);
+	if (filedes == -1)
 		return (-1);
+
+	if (text_content != NULL)
+	{
+		bytes = write(filedes, text_content, text_size);
+		if (bytes == -1)
+		{
+			close(filedes);
+			return (-1);
+		}
 	}
+
+	close(filedes);
 	return (1);
 }
-
-
 
