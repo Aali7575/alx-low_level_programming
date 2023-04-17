@@ -9,11 +9,10 @@
  * Return: number of bits.
  */
 
-unsigned intflip_bits(unsigned long int n, unsigned long int m)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int BYTE_LEN;
 
-	int y = (sizeof(n) * BYTE_LEN);
+	int y = (sizeof(n) * len);
 	int x = 0;
 
 	while (y--)
