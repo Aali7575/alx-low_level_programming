@@ -20,13 +20,14 @@ int create_file(const char *filename, char *text_content)
 	}
 
 	fd = open(filename,O_CREAT | O_RDWR, S_IRUSR | S_IWUSR | O_TRUNC);
-	if (fd == -1)
+	if (!fd)
 	{
-		perror("fails");
+		return (-1);
 	}
 	if (text_content == NULL)
 	{
-		O_CREAT
+		text_content = " ";
 	}
 	writing = write(fd,text_content,size,len);
+}
 
